@@ -89,21 +89,6 @@ namespace dz_files
                 if (str != "")
                     PoemText += string.Format(str + "\n");
             } while (str != "");
-
-
-           //Console.WriteLine("Нажмите клавишу 'Q' для завершения ввода."); 
-           //StringBuilder result = new StringBuilder(); 
-           //while (true)
-           //{ 
-           //    ConsoleKeyInfo keyInfo = Console.ReadKey(); 
-           //    if (keyInfo.Key == ConsoleKey.Q) 
-           //    {
-           //        break; 
-           //    } 
-           //    result.Append(keyInfo.KeyChar); 
-           //}
-           //PoemText = result.ToString();
-            //PoemText = Console.ReadLine();
             Console.WriteLine("Введите тему стиха:");
             PoemTheme = Console.ReadLine();
         }
@@ -130,10 +115,7 @@ namespace dz_files
             Console.Write($"Poem Theme: ");
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"{PoemTheme}");
-            Console.ForegroundColor = ConsoleColor.White;
-
-            //Console.WriteLine($"\nTitl: {Title}\nAuthor Name: {AuthorName}" +
-            //    $"\nYear of edition: {Year}\nText of the poem:\n{PoemText}Poem Theme: {PoemTheme}");
+            Console.ForegroundColor = ConsoleColor.White;;
         }
     }
 
@@ -175,8 +157,6 @@ namespace dz_files
 
         public void ChangeInfo()
         {
-            //Console.WriteLine("Введите название стиха для изменения:");
-            //string title = Console.ReadLine();
             bool c = true;
             do
             {
@@ -200,13 +180,6 @@ namespace dz_files
                             "\n(ввести название стиха, для которого нужны изменения, вы сможете в следующем шаге)");
                         string author = Console.ReadLine();
                         SearchByTitle().AuthorName=author;
-                      // foreach (Poem item in list)
-                      // {
-                      //     if(item.Title==title)
-                      //     {
-                      //         item.AuthorName=author;
-                      //     }
-                      // }
                        break;
                     case 3:
                         Console.WriteLine("Введите новый год издания:" +
